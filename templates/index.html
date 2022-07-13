@@ -84,11 +84,13 @@ function retornaTextoDiv(retorno){
 	//alert(retorno2.length); // 48
 	console.log(retorno);
 	console.log(retorno.length);
-	fraseOriginal = frases[4];
+	// o primero resultado é sempre a propria sentenca, tokenizada e com os tokens unidos
+	var fraseOriginal = retorno[0];
+	#fraseOriginal = frases[4];
 	var textoDiv = '<div class="entities" style="line-height: 2.5; direction: ltr">';
 	marcacaoInicio = '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">'
 	marcacaoFim = '</mark>'
-	for (var i=0; i<retorno.length;i++)
+	for (var i=1; i<retorno.length;i++)
 	{
 		var texto = retorno[i];
 		fraseOriginal = fraseOriginal.replace(texto, marcacaoInicio+texto+marcacaoFim)
