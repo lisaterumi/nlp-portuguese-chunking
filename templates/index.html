@@ -50,8 +50,7 @@ body.loading .modal {
 		<option value="0">Paciente POI de cx de fx rádio distal, lúcido, verbalizando, eupnéico (...)</option>
 		<option value="1">Cliente encaminhado ao CC para procedimento com neurocx. Colocada em névoa (...)</option>
 		<option value="2">Paciente com mesmo quadro neurológico, com abertura ocular espontânea, (...)</option>
-		<option value="3">AVC EM JUGULAR ESQUERDA, SEM SINAIS FLOGÍSTICOS, COM SOROTERAPIA (...)</option>
-		<option value="4">Em uso de insulina nph, metformina, sinvastatina 40mg 2 cp, carvedilol (...)</option>		
+		<option value="3">Em uso de insulina nph, metformina, sinvastatina 40mg 2 cp, carvedilol (...)</option>		
 	  </select>
 	  </div>
 	  <br><br><br>
@@ -76,8 +75,7 @@ var frases = []
 frases[0]="Paciente POI de cx de fx rádio distal, lúcido, verbalizando, eupnéico, com boa perfusão distal, mantém tala com enfaixamento em MSE. 00:08h: Paciente encaminhado à clínica X-leme para realização de complemento da ressonância, já realizada anteriormente."
 frases[1]="Cliente encaminhado ao CC para procedimento com neurocx. Colocada em névoa úmida no período, sem intercorrências. "
 frases[2]="Paciente com mesmo quadro neurológico, com abertura ocular espontânea, não contactuante, em uso de SNE com dieta, permanece aguardando familiares para orientações, pois já encontra-se de alta."
-frases[3]="AVC EM JUGULAR ESQUERDA, SEM SINAIS FLOGÍSTICOS, COM SOROTERAPIA EM CURSO. RELATA ELIMINAÇÕES VESICAIS E INTESTINAIS. RIM TRANSPLANTADO."
-frases[4]="Em uso de insulina nph, metformina, sinvastatina 40mg 2 cp, carvedilol 6,25mg, losartana 50mg 2 x dia, AAS 100mg, clopidogrel 75mg. Tabagista há mais de 40 anos. Hoje fuma 8 cigarros por dia. Antes 2 carteiras/dia. Nega queixas.  O # LAboratorial 07/08/2013: HB: 12,9; Hematocrito 37,5; glicemia: 144; microalbuminuria: 2030,7 mg.  Cintilografia de perfusao miocardica agosto/13: Sem evidencias de isquemia miocardica, fç do VE preservada com hipocinesia septal."
+frases[3]="Em uso de insulina nph, metformina, sinvastatina 40mg 2 cp, carvedilol 6,25mg, losartana 50mg 2 x dia, AAS 100mg, clopidogrel 75mg. Tabagista há mais de 40 anos. Hoje fuma 8 cigarros por dia. Antes 2 carteiras/dia. Nega queixas.  O # LAboratorial 07/08/2013: HB: 12,9; Hematocrito 37,5; glicemia: 144; microalbuminuria: 2030,7 mg.  Cintilografia de perfusao miocardica agosto/13: Sem evidencias de isquemia miocardica, fç do VE preservada com hipocinesia septal."
 
 function retornaTextoDiv(retorno){
 	var cor = "red";
@@ -86,7 +84,6 @@ function retornaTextoDiv(retorno){
 	console.log(retorno.length);
 	// o primero resultado é sempre a propria sentenca, tokenizada e com os tokens unidos
 	var fraseOriginal = retorno[0];
-	#fraseOriginal = frases[4];
 	var textoDiv = '<div class="entities" style="line-height: 2.5; direction: ltr">';
 	marcacaoInicio = '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">'
 	marcacaoFim = '</mark>'
