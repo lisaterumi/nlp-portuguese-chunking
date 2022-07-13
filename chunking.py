@@ -12,10 +12,12 @@ nlp = pt_core_news_md.load()
 def get_np(frase):
         print('frase:', frase[0])
         doc = nlp(frase[0])
+        novaFrase = ' '.join([token.text for token in doc])
         lista_chunks = []
         all_novo_chunk = []
         temNoun=0
         tokens_chunk = []
+        all_novo_chunk.append(novaFrase)
         for num, token in enumerate(doc):
             if token.pos_ != 'VERB' and token.pos_ != 'AUX' and token.pos_ != 'PUNCT' and token.pos_ != 'PRON' and token.pos_ != 'SPACE' and token.text != '+' and token.text != '#':
                 if len(tokens_chunk)!=0 or (len(tokens_chunk)==0 and (token.pos_ != 'ADP' and token.pos_ != 'DET' and token.pos_ != 'SCONJ' and token.pos_ != 'CCONJ')):
@@ -48,5 +50,6 @@ def get_np(frase):
                 lista_chunks.append(tokens_chunk)
                 tokens_chunk = []
                 temNoun = 0
-        #print(all_novo_chunk)
-        return all_novo_chunk
+        print('retornando:', all_novo_chunk)
+        
+        return all_novo_chunk 

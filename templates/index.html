@@ -82,16 +82,18 @@ frases[4]="Em uso de insulina nph, metformina, sinvastatina 40mg 2 cp, carvedilo
 function retornaTextoDiv(retorno){
 	var cor = "red";
 	//alert(retorno2.length); // 48
+	console.log(retorno);
 	console.log(retorno.length);
 	fraseOriginal = frases[4];
 	var textoDiv = '<div class="entities" style="line-height: 2.5; direction: ltr">';
+	marcacaoInicio = '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">'
+	marcacaoFim = '</mark>'
 	for (var i=0; i<retorno.length;i++)
 	{
 		var texto = retorno[i];
-		textoDiv += '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">'
-		textoDiv = textoDiv + fraseOriginal.replace(texto, textoDiv+texto+'</mark>')
+		fraseOriginal = fraseOriginal.replace(texto, marcacaoInicio+texto+marcacaoFim)
 	}
-	textoDiv = textoDiv+'</div>';
+	textoDiv = textoDiv+fraseOriginal+'</div>';
 	console.log(textoDiv);
 	document.getElementById("retorno").innerHTML = textoDiv;
 }
@@ -112,7 +114,7 @@ document.getElementById("submit").onclick = function() {
 
       var word = document.getElementById("word").value;
 	  // tirar "-" pq dá erro
-	  word = word.replace("-", " ");
+	  word = word.replace("-", " ").replace("#", " ").replace("/", " ");
       path = "/chunks?word=" + word;
 	  
 	  $.ajax({
