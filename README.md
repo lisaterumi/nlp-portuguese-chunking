@@ -1,5 +1,6 @@
 # Nlp Portuguese Chunking
 ## Uma API para extração de chunks (Noun phrases) em textos clínicos
+### "Chunk Is All You Need" 
 
 ** *trabalho em andamento* **
 
@@ -52,7 +53,7 @@ python app.py
  
 Serão retornadas os chunking identificados na sentença de entrada. 
  
-<img src="img/chunk1.jpg">
+<img src="img/chunk1.png">
 
 <img src="img/chunk2.jpg">
 

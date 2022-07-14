@@ -8,7 +8,6 @@ import chunking as chunking
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-
 @app.route('/', methods=['GET'])
 def index():
     print ("iniciando")
@@ -17,7 +16,7 @@ def index():
 @app.route("/chunks")
 def chunks():
     frase = [request.args.get('word')]
-    result = chunking.get_np(frase)
+    result = chunking.get_np(frase[0], 0)
     return jsonify(result)
 
 import os
