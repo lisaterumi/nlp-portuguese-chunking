@@ -32,6 +32,11 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 ```
 
 ## Como executar localmente
+
+Você pode executar diretamente pelo noteoobk: https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese.ipynb
+
+Ou executar um servidor para ter acesso à interface web, seguindo os passos abaixo.
+
 1. Clone o repositório
 2. Instale as biblitecas necessárias (se preferir, use [Anaconda](http://www.anaconda.com))
 ```
