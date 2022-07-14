@@ -56,9 +56,7 @@ python app.py
  
 Serão retornadas os chunking identificados na sentença de entrada. 
  
-<img src="img/chunk1.png">
-
-<img src="img/chunk2.jpg">
+<img src="img/chunk.png">
 
 ## Executando via Docker
 
