@@ -1,8 +1,6 @@
 # Nlp Portuguese Chunking
 ## Uma API para extração de chunks (Noun phrases) em textos clínicos
-### "Chunk Is All You Need" 
-
-** *trabalho em andamento* **
+### Porque "Chunk Is All You Need" 😄😄😄
 
 # Índice
 1. [Sobre](#sobre)
