@@ -28,8 +28,7 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 
 ---Chunks da frase:---
 
-['Data de Criação do Documento 22/04/2014', 'Dispneia importante aos esforços', 'dor tipo peso no peito no esforço', 'Obeso', 'has', 'cintilografia miocardica', 'angina']
-
+['Data de Criação do Documento 22/04/2014', 'Dispneia importante aos esforços', 'dor tipo peso no peito no esforço', 'Obeso', 'has', 'icc', 'cintilografia miocardica', 'angina']
 ```
 
 ## Como executar localmente
