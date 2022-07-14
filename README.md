@@ -1,4 +1,5 @@
-# Nlp Portuguese Chunking - Uma API para extração de chunks (Noun phrases) em textos clínicos
+# Nlp Portuguese Chunking
+## Uma API para extração de chunks (Noun phrases) em textos clínicos
 
 ** *trabalho em andamento* **
 
@@ -17,6 +18,19 @@ Neste trabalho, exrtaímos as frases nominais, ou seja, frases que têm um subst
 Utilizamos a biblioteca `spacy` para tokenizar e extrair o POS-tagger de cada palavra da frase, com o corpus `pt_core_news_md`.
 
 Na sequencia, criamos uma função que extrai todos os substantivos da frase, mantendo-o junto com os seus complementos (adjetivos, advérbios, etc).
+
+Exemplo: 
+```
+---Frase original:---
+
+Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços + dor tipo peso no peito no esforço. Obeso, has, icc  c # cintilografia miocardica para avaliar angina.
+
+
+---Chunks da frase:---
+
+['Data de Criação do Documento 22/04/2014', 'Dispneia importante aos esforços', 'dor tipo peso no peito no esforço', 'Obeso', 'has', 'cintilografia miocardica', 'angina']
+
+```
 
 ## Como executar localmente
 1. Clone o repositório
