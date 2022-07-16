@@ -33,6 +33,12 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 ['Data de Criação do Documento 22/04/2014', 'Dispneia importante aos esforços', 'dor tipo peso no peito no esforço', 'Obeso', 'has', 'icc', 'cintilografia miocardica', 'angina']
 ```
 
+Nosso modelo está no repositório oficial do Hugging Faces, você pode acessá-lo pelo endereço: https://huggingface.co/pucpr-br/postagger-bio-portuguese.
+
+<img src="img/postagger-huggingfaces.png">
+
+Se você gostou do nosso trabalho, não se esqueça de dar u like no modelo no Hugging Faces ❤️
+
 ## Como executar localmente
 
 Você pode executar diretamente pelos notebooks [com spacy](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_spacy.ipynb) e com o [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
