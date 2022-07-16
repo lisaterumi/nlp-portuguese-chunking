@@ -4,9 +4,10 @@
 
 # Índice
 1. [Sobre](#sobre)
-2. [Como executar localmente](#como-executar-localmente)
-3. [Executando via docker](#executando-via-docker)
-4. [Como citar](#como-citar)
+2. [POS-Tagger](#pos-tagger)
+3. [Como executar localmente](#como-executar-localmente)
+4. [Executando via docker](#executando-via-docker)
+5. [Como citar](#como-citar)
 
 ## Sobre
 
@@ -33,11 +34,25 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 ['Data de Criação do Documento 22/04/2014', 'Dispneia importante aos esforços', 'dor tipo peso no peito no esforço', 'Obeso', 'has', 'icc', 'cintilografia miocardica', 'angina']
 ```
 
+## POS-Tagger
+
+Além do modelo de pos-tagger forneceido pelo `spacy`, também treinamos um modelo próprio a partir do *fine-tuning* do modelo de linguagem [BioBERTpt(all)](https://huggingface.co/pucpr/biobertpt-all) com o corpus [MacMorpho](http://nilc.icmc.usp.br/macmorpho/), com 10 épocas, chegando em um *F1-Score* geral de 0.9814.
+
 Nosso modelo está no repositório oficial do Hugging Faces, você pode acessá-lo pelo endereço: https://huggingface.co/pucpr-br/postagger-bio-portuguese.
 
 <img src="img/postagger-huggingfaces.png">
 
 Se você gostou do nosso trabalho, não se esqueça de dar u like no modelo no Hugging Faces ❤️
+
+Como usar o modelo de POS-tagger:
+
+```
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+
+tokenizer = AutoTokenizer.from_pretrained("pucpr-br/postagger-bio-portuguese")
+
+model = AutoModelForTokenClassification.from_pretrained("pucpr-br/postagger-bio-portuguese")
+```
 
 ## Como executar localmente
 
