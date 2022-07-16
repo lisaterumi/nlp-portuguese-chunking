@@ -37,7 +37,7 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 
 Você pode executar diretamente pelos notebooks [com `spacy`](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_spacy.ipynb) e com o [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
 
-Ou executar um servidor para ter acesso à interface web, seguindo os passos abaixo.
+Ou executar um servidor para ter acesso à interface web, seguindo os passos abaixo (os exmeplos a seguir são com o uso da bilbioteca `spcay`, por ser um moelo mais leve de executar, principalmente dentro dos containers).
 
 1. Clone o repositório
 2. Instale as biblitecas necessárias (se preferir, use [Anaconda](http://www.anaconda.com))
