@@ -1,4 +1,4 @@
-# Nlp Portuguese Chunking
+# Nlp Bio Portuguese Chunking
 ## Uma API para extração de chunks (Noun phrases) em textos clínicos
 ### Porque "Chunk Is All You Need" 😄😄😄
 
@@ -14,7 +14,10 @@ Chunking é uma maneira de agrupar elementos sequenciais de um texto como frases
 
 Neste trabalho, exrtaímos as frases nominais, ou seja, frases que têm um substantivo como cabeça ("Noun phrases"). 
 
-Utilizamos a biblioteca `spacy` para tokenizar e extrair o POS-tagger de cada palavra da frase, com o corpus `pt_core_news_md`.
+Utilizamos dois métodos para gerar o POS-Tagger das senteças:
+
+1. A biblioteca `spacy` para tokenizar e extrair o POS-tagger de cada palavra da frase, com o corpus `pt_core_news_md`.
+2. Um modelo token-sequence `BERT` treinado com o corpus [`MacMorpho`](http://nilc.icmc.usp.br/macmorpho/) usando como checkpoint o modelo [BioBERTpt](https://huggingface.co/pucpr/biobertpt-all), sendo este último treinado com textos clínicos e biomédicos em português.
 
 Na sequencia, criamos uma função que extrai todos os substantivos da frase, mantendo-o junto com os seus complementos (adjetivos, advérbios, etc).
 
@@ -32,7 +35,7 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 
 ## Como executar localmente
 
-Você pode executar diretamente pelo noteoobk: https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese.ipynb
+Você pode executar diretamente pelos notebooks [com `spacy`](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_spacy.ipynb) e com o [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
 
 Ou executar um servidor para ter acesso à interface web, seguindo os passos abaixo.
 
