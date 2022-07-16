@@ -1,5 +1,5 @@
 # Nlp Bio Portuguese Chunking
-## Uma API para extração de chunks (*Noun phrases*) em textos clínicos
+## Uma API para extração de *chunks* (*Noun phrases*) em textos clínicos
 ### Porque "*Chunk Is All You Need*" 😄😄😄
 
 # Índice
