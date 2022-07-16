@@ -84,11 +84,11 @@ Serão retornadas os *chunks* identificados na sentença de entrada.
 
 ## Executando via Docker
 
-1. Para executar a API dentro de um *container* Docker, onde não é necessário se preocupar com o ambiente e bibliotecas, basta seguir os passos:
+1. Para executar a API dentro de um *container* `Docker`, onde não é necessário se preocupar com o ambiente e bibliotecas, basta seguir os passos:
 
-1. Caso não possua, instale o Docker seguindo [essas orientações](https://docs.docker.com/get-started/).
+1. Caso não possua, instale o `Docker` seguindo [essas orientações](https://docs.docker.com/get-started/).
 
-2. Execute os seguintes comandos (para executar o container na porta 5000)
+2. Execute os seguintes comandos (para executar o *container* na porta 5000)
 ```
 docker build -t chunking .
 
