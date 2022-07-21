@@ -54,7 +54,7 @@ tokenizer = AutoTokenizer.from_pretrained("pucpr-br/postagger-bio-portuguese")
 model = AutoModelForTokenClassification.from_pretrained("pucpr-br/postagger-bio-portuguese")
 ```
 
-OBS: Caso você necessite outros modelos de POS-taggers para português, na área clínica ou biomédica, não deixe de experimentar esses [modelos treinados com Flair] (https://github.com/HAILab-PUCPR/portuguese-clinical-pos-tagger).
+OBS: Caso você necessite outros modelos de POS-taggers para português, na área clínica ou biomédica, não deixe de experimentar esses [modelos treinados com Flair](https://github.com/HAILab-PUCPR/portuguese-clinical-pos-tagger).
 
 
 ## Como executar localmente para extrair os *chunks*
