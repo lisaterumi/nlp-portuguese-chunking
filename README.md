@@ -40,7 +40,7 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 
 ## POS-Tagger
 
-In addition to the POS-tagger model provided by `spacy`, we also trained our own model using the fine-tuning of the language model [BioBERTpt(all)](https://huggingface.co/pucpr/biobertpt -all) with the corpus for Portuguese [MacMorpho](http://nilc.icmc.usp.br/macmorpho/), with 10 epochs, reaching an overall F1-Score of **0.9814**.
+In addition to the POS-tagger model provided by `spacy`, we also trained our own model using the fine-tuning of the language model [BioBERTpt(all)](https://huggingface.co/pucpr/biobertpt-all) with the corpus for Portuguese [MacMorpho](http://nilc.icmc.usp.br/macmorpho/), with 10 epochs, reaching an overall F1-Score of **0.9814**.
 
 Our model is in the official repository of `Hugging Faces`, you can access it through the address: https://huggingface.co/pucpr-br/postagger-bio-portuguese.
 
@@ -91,7 +91,7 @@ PS: In case you need other POS-taggers trained for the portuguese language, in c
 
 ## How to run locally to extract the chunks
 
-To generate the chunks (noun phrases), you can run it directly from these notebooks: [with spacy](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking- portuguese_spacy.ipynb) and with [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
+To generate the chunks (noun phrases), you can run it directly from these notebooks: [with spacy](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_spacy.ipynb) and with [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
 
 Or run a server to access via an web interface, following the steps below (the following examples are using the `spacy` library, as it is a lighter model to run, especially within containers).
 
