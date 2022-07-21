@@ -5,17 +5,17 @@
 # Índice
 1. [Sobre](#sobre)
 2. [POS-Tagger](#pos-tagger)
-3. [Como executar localmente](#como-executar-localmente)
+3. [Como executar localmente](#como-executar-localmente-para-extrair-os-chunks)
 4. [Executando via docker](#executando-via-docker)
 5. [Como citar](#como-citar)
 
 ## Sobre
 
-*Chunking* é uma maneira de agrupar elementos sequenciais de um texto como frases, podendo ser frase nominal, frase verbal, frase preposicional etc, utilizando a sua parte do discurso (*POS-tagger*). Ao contrário do reconhecimento de entidade nomeada (NER ou REN), que encontra e classifica pedaços relevantes no texto.
+*Chunking* é uma maneira de agrupar elementos sequenciais de um texto como frases, podendo ser frase nominal, frase verbal, frase preposicional etc, utilizando a sua parte do discurso (*POS-tag*). Ao contrário do reconhecimento de entidade nomeada (NER ou REN), que encontra e classifica pedaços relevantes no texto.
 
 Neste trabalho, extraímos as frases nominais, ou seja, frases que têm um substantivo como cabeça ("*Noun phrases*"). 
 
-Utilizamos dois métodos para gerar o *POS-Tagger* das senteças:
+Utilizamos dois métodos para gerar o *POS-Tag* das senteças:
 
 1. A biblioteca `spacy` para tokenizar e extrair o *POS-tagger* de cada palavra da frase, com o *corpus* `pt_core_news_md`.
 2. Um modelo *token-sequence* `BERT` treinado com o *corpus* [`MacMorpho`](http://nilc.icmc.usp.br/macmorpho/) usando como *checkpoint* o modelo [BioBERTpt](https://huggingface.co/pucpr/biobertpt-all), sendo este último treinado com textos clínicos e biomédicos em português.
@@ -56,6 +56,34 @@ model = AutoModelForTokenClassification.from_pretrained("pucpr-br/postagger-bio-
 
 OBS: Caso você necessite outros modelos de POS-taggers para português, na área clínica ou biomédica, não deixe de experimentar esses [modelos treinados com Flair](https://github.com/HAILab-PUCPR/portuguese-clinical-pos-tagger).
 
+Aqui você tem um manual dos tipos gramaticais retornados pelo modelo:
+
+| Sigla  |  Significado  |
+| ------------------- | ------------------- |
+|  ADJ |  Adjetivo |
+|  ADV |  Advérbio |
+|  ADV-KS |  Advérbio conjuntivo subordinado  |
+|  ADV-KS-REL |   Advérbio relativo subordinado |
+|  ART |  Artigo  |
+|  CUR |  Moeda  |
+|  IN |  Interjeição |
+|  KC |  Conjunção coordenativa |
+|  KS |  Conjunção subordinativa |
+|  N |  Substantivo |
+|  NPROP | Substantivo próprio |
+|  NUM |  Número |
+|  PCP |  Particípio |
+|  PDEN |  Palavra denotativa |
+|  PREP |  Preposição |
+|  PROADJ |  Pronome Adjetivo |
+|  PRO-KS |  Pronome conjuntivo subordinado |
+|  PRO-KS-REL |  Pronome relativo conectivo subordinado |
+|  PROPESS |  Pronome pessoal |
+|  PROSUB |  Pronome nominal |
+|  V | Verbo |
+|  VAUX  | Verbo auxiliar |
+
+Mais informações e exemplos em: http://nilc.icmc.usp.br/macmorpho/macmorpho-manual.pdf
 
 ## Como executar localmente para extrair os *chunks*
 
