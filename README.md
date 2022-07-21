@@ -2,7 +2,7 @@
 ## An API for extracting chunks (Noun phrases) in clinical texts
 ### "*Chunk Is All You Need*" 😄😄😄
 
-To read in Portuguese, click here:  [README in portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/README.md)
+To read in Portuguese, click here:  [README in portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/READMEpt.md)
 
 # Index
 1. [About](#about)
