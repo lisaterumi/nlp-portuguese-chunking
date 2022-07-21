@@ -6,10 +6,10 @@ To read in Portuguese, click here:  [README in portuguese](https://github.com/li
 
 # Index
 1. [About](#about)
-2. [POS-Tagger](#post-tagger)
-3. [How to run-locally](#how-to-run-locally)
-4. [Running via docker](#running-via-docker)
-5. [How to cite](#how to cite)
+2. [POS-Tagger](#pos-tagger)
+3. [How to run-locally](#how-to-run-locally-to-extract-the-chunks)
+4. [Running via docker](#running-in-container-via-docker)
+5. [How to cite](#how-to-cite)
 
 ## About
 
@@ -58,42 +58,38 @@ tokenizer = AutoTokenizer.from_pretrained("pucpr-br/postagger-bio-portuguese")
 model = AutoModelForTokenClassification.from_pretrained("pucpr-br/postagger-bio-portuguese")
 ```
 
-<<<<<<< HEAD
+Here you have the grammatical types returned by the model:
+
+| Acronym | Meaning |
+| -------------------- | -------------------- |
+| ADJ | adjective |
+| ADV | adverb |
+| ADV-KS | Subordinate subjunctive adverb |
+| ADV-KS-REL | Subordinate relative adverb |
+| ART | Article |
+| CUR | currency |
+| IN | Interjection |
+| KC | Coordinating conjunction |
+| KS | Subordinating conjunction |
+| N | noun |
+| NPROP | Proper noun |
+| NUM | Number |
+| PCP | Participle |
+| PDEN | Denotative word |
+| PREP | Preposition |
+| PROADJ | Adjective pronoun |
+| PRO-KS | Subordinate subjunctive pronoun |
+| PRO-KS-REL | Subordinate connective relative pronoun |
+| PROPESS | Personal pronoun |
+| PROSUB | Noun pronoun |
+| V | verb |
+| VAUX | auxiliary verb |
+
+More information and examples at: http://nilc.icmc.usp.br/macmorpho/macmorpho-manual.pdf
+
 PS: In case you need other POS-taggers trained for the portuguese language, in clinical or medical domain, you can also try these [models trained with Flair](https://github.com/HAILab-PUCPR/portuguese-clinical-pos-tagger).
 
 ## How to run locally to extract the chunks
-=======
-Aqui você tem um manual dos tipos gramaticais retornados pelo modelo:
-
-| Sigla  |  Significado  |
-| ------------------- | ------------------- |
-|  ADJ |  Adjetivo |
-|  ADV |  Advérbio |
-|  ADV-KS |  Advérbio conjuntivo subordinado  |
-|  ADV-KS-REL |   Advérbio relativo subordinado |
-|  ART |  Artigo  |
-|  CUR |  Moeda  |
-|  IN |  Interjeição |
-|  KC |  Conjunção coordenativa |
-|  KS |  Conjunção subordinativa |
-|  N |  Substantivo |
-|  NPROP | Substantivo próprio |
-|  NUM |  Número |
-|  PCP |  Particípio |
-|  PDEN |  Palavra denotativa |
-|  PREP |  Preposição |
-|  PROADJ |  Pronome Adjetivo |
-|  PRO-KS |  Pronome conjuntivo subordinado |
-|  PRO-KS-REL |  Pronome relativo conectivo subordinado |
-|  PROPESS |  Pronome pessoal |
-|  PROSUB |  Pronome nominal |
-|  V | Verbo |
-|  VAUX  | Verbo auxiliar |
-
-Mais informações e exemplos em: http://nilc.icmc.usp.br/macmorpho/macmorpho-manual.pdf
-
-## Como executar localmente
->>>>>>> cd9024ff8815ee3e1eaf0eef320b6ce2db54aea0
 
 To generate the chunks (noun phrases), you can run it directly from these notebooks: [with spacy](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking- portuguese_spacy.ipynb) and with [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
 
@@ -139,6 +135,6 @@ docker run --name chunking_instance -p 0.0.0.0:5000:5000  -d chunking
 ```
 3. In the browser, go to http://localhost:5000/
 
-## How to quote
+## How to cite
 
 ** *soon* **
