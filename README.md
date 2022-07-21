@@ -54,36 +54,10 @@ tokenizer = AutoTokenizer.from_pretrained("pucpr-br/postagger-bio-portuguese")
 model = AutoModelForTokenClassification.from_pretrained("pucpr-br/postagger-bio-portuguese")
 ```
 
-Aqui você tem um manual dos tipos gramaticais retornados pelo modelo:
+OBS: Caso você necessite outros modelos de POS-taggers para português, na área clínica ou biomédica, não deixe de experimentar esses [modelos treinados com Flair] (https://github.com/HAILab-PUCPR/portuguese-clinical-pos-tagger).
 
-| Sigla  |  Significado  |
-| ------------------- | ------------------- |
-|  ADJ |  Adjetivo |
-|  ADV |  Advérbio |
-|  ADV-KS |  Advérbio conjuntivo subordinado  |
-|  ADV-KS-REL |   Advérbio relativo subordinado |
-|  ART |  Artigo  |
-|  CUR |  Moeda  |
-|  IN |  Interjeição |
-|  KC |  Conjunção coordenativa |
-|  KS |  Conjunção subordinativa |
-|  N |  Substantivo |
-|  NPROP | Substantivo próprio |
-|  NUM |  Número |
-|  PCP |  Particípio |
-|  PDEN |  Palavra denotativa |
-|  PREP |  Preposição |
-|  PROADJ |  Pronome Adjetivo |
-|  PRO-KS |  Pronome conjuntivo subordinado |
-|  PRO-KS-REL |  Pronome relativo conectivo subordinado |
-|  PROPESS |  Pronome pessoal |
-|  PROSUB |  Pronome nominal |
-|  V | Verbo |
-|  VAUX  | Verbo auxiliar |
 
-Mais informações e exemplos em: http://nilc.icmc.usp.br/macmorpho/macmorpho-manual.pdf
-
-## Como executar localmente
+## Como executar localmente para extrair os *chunks*
 
 Para gerar os *chunks* (*noun phrases*), você pode executar diretamente pelos *notebooks* [com spacy](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_spacy.ipynb) e com o [POS-Tagger Bio Portuguese](https://github.com/lisaterumi/nlp-portuguese-chunking/blob/main/notebook/chunking-portuguese_postagger_biopt.ipynb)
 
