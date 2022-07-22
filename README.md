@@ -133,7 +133,14 @@ docker build -t chunking .
 docker run --name chunking_instance -p 0.0.0.0:5000:5000  -d chunking
 
 ```
+You also can run directly by our [image in Dockerhub](https://hub.docker.com/r/terumi/chunking/tags):
+
+```
+docker run --name chunking_instance -p 0.0.0.0:5000:5000 -d terumi/chunking:version1
+```
+
 3. In the browser, go to http://localhost:5000/
+
 
 ## How to cite
 
