@@ -124,7 +124,10 @@ Serão retornadas os *chunks* identificados na sentença de entrada.
 docker build -t chunking .
 
 docker run --name chunking_instance -p 0.0.0.0:5000:5000  -d chunking
-
+```
+Ou, se desejar executá-la diretamente da nossa [imagem no Dockerhub](https://hub.docker.com/r/terumi/chunking/tags):
+```
+docker run --name chunking_instance -p 0.0.0.0:5000:5000 -d terumi/chunking:version1
 ```
 3. No navegador, acesse http://localhost:5000/
 
