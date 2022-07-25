@@ -36,7 +36,7 @@ Data de Criação do Documento: 22/04/2014   Dispneia importante aos esforços +
 
 ## POS-Tagger
 
-Além do modelo de *POS-tagger* fornecido pelo `spacy`, também treinamos um modelo próprio a partir do *fine-tuning* do modelo de linguagem [BioBERTpt(all)](https://huggingface.co/pucpr/biobertpt-all) com o *corpus* para língua portuguesa [MacMorpho](http://nilc.icmc.usp.br/macmorpho/), com 10 épocas, chegando em um *F1-Score* geral de 0.9814.
+Além do modelo de *POS-tagger* fornecido pelo `spacy`, também treinamos um modelo próprio a partir do *fine-tuning* do modelo de linguagem [BioBERTpt(all)](https://huggingface.co/pucpr/biobertpt-all) com o *corpus* para língua portuguesa [MacMorpho](http://nilc.icmc.usp.br/macmorpho/), com 10 épocas, chegando em um *F1-Score* geral de **0.9818**.
 
 Nosso modelo está no repositório oficial do `Hugging Faces`, você pode acessá-lo pelo endereço: https://huggingface.co/pucpr-br/postagger-bio-portuguese.
 
